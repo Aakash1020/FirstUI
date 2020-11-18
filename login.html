@@ -28,7 +28,12 @@
 		.screen-body span{
 			font-size: 3em;
 			margin: 20px;
-			font-weight: 650;
+		
+		}
+		@media (max-width: 400px){
+			.screen-body span{
+				font-size: 2em;
+			}
 		}
 		.form{
 			background-color: white;
@@ -37,6 +42,8 @@
 			border-radius: 15px;
 			z-index: -1;
 		}
+
+
 		
 		.l1{
 			display: flex;
@@ -51,8 +58,31 @@
 			outline: none;
 			
 		}
+		@media (max-width: 400px){
+			.l1{
+				width: 75%;
+				padding: 15px;
+				font-size: 12px;
+				justify-content: center;
+			}
+		}
 		.l1:placeholder {
 		  	color: #666;
+		}
+
+
+		.screen-body p{
+			width: 47%;
+			margin-left: 10px;
+			padding: 10px;
+			text-decoration: none;
+			font-size: 0.9em;
+		}
+		@media (max-width: 400px){
+			.screen-body p{
+				width: 85%;
+				font-size: 0.8em;
+			}
 		}
 		.text1{
 			color: #0057FF;
@@ -63,16 +93,18 @@
 			font-size: 1.1em;
 			width: auto;
 		}
+		@media (max-width: 400px){
+			.text1{
+				font-size: 0.9em;
+				padding: 5px;
+				margin-left: 15px;
+			}
+		}
+
 		.text1:hover{
 			text-decoration: underline;
 		}
-		.screen-body p{
-			max-width: 47%;
-			margin-left: 10px;
-			padding: 10px;
-			text-decoration: none;
-			font-size: 0.9em;
-		}
+		
 		.submit{
 			background-color: #0057FF;
 			text-align: center;
@@ -85,8 +117,14 @@
   			width: 45%;
   			cursor: pointer;
   			outline: none;
-
 		}
+		@media (max-width: 400px){
+			.submit{
+				width: 85%;
+				padding: 18px;
+			}
+		}
+
 
 		
 
@@ -100,8 +138,8 @@
 			<div class="screen-body">
 				<span>Please sign in.</span>
 				<form class="form">
-					<input class="l1" placeholder="NAME">
-					<input class="l1" placeholder="PASSWORD">
+					<input class="l1" placeholder="Cloud ID">
+					<input class="l1" placeholder="Password">
 					
 				</form>
 				<p>Your Cloud ID is the email address or mobile phone number you have been registered, please check your mail for more information.</p>
