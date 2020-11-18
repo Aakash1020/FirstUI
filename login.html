@@ -7,328 +7,120 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 	<title>Login</title>
 	<style type="text/css">
-		body {
-  			margin: 0;
-  			padding: 0;
-  			height: 100%;		
-			background-color: #3e3e3e;
-			font-family: 'Montserrat', sans-serif;
+		body{
+			margin: 0;
+			height: 0;
+			font-family: 'Open Sans', Arial, sans-serif;
 		}
-		.nav ul {
-			font-size: 12px;
-			letter-spacing: 1.4px;
-  			list-style: none;
-  			background-color: #000000;
-  			text-align: center;
-  			padding: 0;
-  			margin: 0;
+		.container{
+			
+			display: flex;
+			min-height: 100vh;
 		}
-		.nav li {
-
-  			font-family: 'Cousine', monospace;
-  			line-height: 40px;
-  			height: 40px;
-  			border-bottom: 1px solid #888;
+		.screen-body{
+			background-color: transparent;
+			margin: auto;
+			width: auto;
+			padding: 10px;
+			
+			
 		}
-		.nav a {
-		  text-decoration: none;
-		  color: #fff;
-		  display: block;
-		  transition: .3s background-color;
+		.screen-body span{
+			font-size: 3em;
+			margin: 20px;
+			font-weight: 650;
 		}
- 
-		.nav a:hover {
-		  color: #000000;
+		.form{
+			background-color: white;
+			margin-top: 40px;
+			background: transparent;
+			border-radius: 15px;
+			z-index: -1;
 		}
-		.nav li:hover {
-		  background-color: #ffffff;
+		
+		.l1{
+			display: flex;
+			margin: 20px;
+			width: 40%;
+			padding: 20px;
+			background: none;
+			border-radius: 20px;
+			border: 1px solid #666;
+			color: #000;
+			font-size: 14px;
+			outline: none;
+			
 		}
-		 
-		@media screen and (min-width: 600px) {
-		  .nav li {
-		    width: 120px;
-		    border-bottom: none;
-		    height: 50px;
-		    line-height: 50px;
-		    font-size: 1.4em;
-		  }
-		 
-		  /* Option 1 - Display Inline */
-		.nav li {
-		   display: inline-block;
-		   margin-right: -4px;
-		  }
-
-		.container-left{
-			text-align: left;
-			width: 500px;
-			margin: 5%;
-			padding: 40px;		
-			display: inline-block;
-			transform: translate3d(-50%, 0);
+		.l1:placeholder {
+		  	color: #666;
 		}
-		.container-left .content-wrap span{
-			opacity: 1;
-			transition: all 3.5s ease;
+		.text1{
+			color: #0057FF;
+			display: flex;
+			margin-left: 10px;
+			padding: 10px;
+			text-decoration: none;
+			font-size: 1.1em;
+			width: auto;
 		}
-
-		.container-left.content-hidden .content-wrap span { opacity: 0; }
-
-		.container-left span{
-			color: #fff;
-			font-size: 6em;
+		.text1:hover{
+			text-decoration: underline;
 		}
-		.container-left p{
-			color: #FFA600;
-			font-size: 2em;
+		.screen-body p{
+			max-width: 47%;
+			margin-left: 10px;
+			padding: 10px;
+			text-decoration: none;
+			font-size: 0.9em;
 		}
-		.background-right{
-			float: right;
-			width: 50%;
-			height: 100vh;
-			font-size: 2em;
-			background-color: #FFA600;
-		}
-
-		.container {
-			padding: 12%;
-			align-self: center;
-		}
-
-		.screen-right {
-			background-color: #3e3e3e;
-		  	border-radius: 15px;
-		}
-
-		.screen:after {
-		  content: '';
-		  display: block;
-		  position: absolute;
-		  top: 0;
-		  left: 20px;
-		  right: 20px;
-		  bottom: 0;
-		  border-radius: 15px;
-		  box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
-		  z-index: -1;
-		}
-
-		.screen-header {
-		  display: flex;
-		  align-items: center;
-		  padding: 5px 20px;
-		  background: #161616;
-		  border-top-left-radius: 15px;
-		  border-top-right-radius: 15px;
-		}
-
-		.screen-header-left {
-		  margin-right: auto;
-		}
-
-		.screen-header-button {
-		  display: inline-block;
-		  width: 8px;
-		  height: 8px;
-		  margin-right: 3px;
-		  border-radius: 8px;
-		  background: white;
-		}
-
-		.screen-header-button.close {
-		  background: #ed1c6f;
-		}
-
-		.screen-header-button.maximize {
-		  background: #e8e925;
-		}
-
-		.screen-header-button.minimize {
-		  background: #74c54f;
-		}
-
-		.screen-header-right {
-		  display: flex;
-		}
-
-		.screen-header-ellipsis {
-		  width: 3px;
-		  height: 3px;
-		  margin-left: 2px;
-		  border-radius: 8px;
-		  background: #999;
-		}
-
-		.screen-body {
-		  display: flex;
-		}
-
-		.screen-body-item {
-		  flex: 1;
-		  padding: 25px;
-		}
-
-		.screen-body-item.left {
-		  display: flex;
-		  flex-direction: column;
-		}
-
-		.app-title {
-		  display: flex;
-		  flex-direction: column;
-		  position: relative;
-		  color: #FFA600;
-		  font-size: 26px;
-		}
-
-		.app-title:after {
-		  content: '';
-		  display: block;
-		  position: absolute;
-		  left: 0;
-		  bottom: -10px;
-		  width: 25px;
-		  height: 4px;
-		  background: #FFA600;
-		}
-
-		.app-contact {
-		  margin-top: auto;
-		  font-size: 8px;
-		  color: #888;
-		}
-
-		.app-form-group {
-		  margin-bottom: 15px;
-		}
-
-		.app-form-group.buttons {
-		  margin-bottom: 0;
-		  text-align: right;
-
-		}
-
-		.app-form-control {
-		  width: 100%;
-		  padding: 10px 0;
-		  background: none;
-		  border: none;
-		  border-bottom: 1px solid #666;
-		  color: #ddd;
-		  font-size: 14px;
-		  text-transform: uppercase;
-		  outline: none;
-		  transition: border-color .2s;
-		}
-
-		.app-form-control::placeholder {
-		  color: #666;
-		}
-
-		.app-form-control:focus {
-		  border-bottom-color: #ddd;
-		}
-
-		.app-form-button {
-		  border: none;
-		  color: #FFA600;
-		  font-size: 14px;
-		  cursor: pointer;
-		  text-decoration: none;
-		  padding: 10px;
-		}
-
-		.app-form-button:hover {
-		  color: #FFA600;
-		}
-		.t1{
-			font-size: 1em;
+		.submit{
+			background-color: #0057FF;
 			text-align: center;
-			margin-top: 30px;
+  			border: none;
+  			color: white;
+  			margin: 20px;
+  			padding: 20px;
+  			border-radius: 20px;
+  			font-size: 14px;
+  			width: 45%;
+  			cursor: pointer;
+  			outline: none;
+
 		}
-
-	</style>
-
-
-	<!--<div class="nav">
-        <ul>
-          <li class="home"><a href="login.html">Home</a></li>
-          <li class="tutorials"><a href="services.html">Services</a></li>
-          <li class="Products"><a href="#">Products</a></li>
-          <li class="news"><a href="#">Contacts</a></li>
-        </ul>
-      </div>-->
-</head>
-<body>
-	<div class="container-left content-hidden">
-		<div class="content-wrap" >
-			<span>Cloud Protection</span>
-			<p>' An Intermediate Security Service Protection for Cloud Storage Service '</p>
-		</div>
-
-	</div>
-	<div class="background-right">
-		<div class="container">
-			<div class="screen-right">
-		      	<div class="screen-header">
-		        	<div class="screen-header-left">
-		          		<div class="screen-header-button close"></div>
-		          		<div class="screen-header-button maximize"></div>
-		          		<div class="screen-header-button minimize"></div>
-		        	</div>
-		        	<div class="screen-header-right">
-		          		<div class="screen-header-ellipsis"></div>
-		          		<div class="screen-header-ellipsis"></div>
-		          		<div class="screen-header-ellipsis"></div>
-		        	</div>
-		      	</div>
-		      	<div class="screen-body">
-		        	<div class="screen-body-item left">
-		          		<div class="app-title">
-		           			<span>LOGIN</span>
-		          		</div>
-			        </div>
-			        <div class="screen-body-item">
-			          	<div class="app-form">
-			           		<div class="app-form-group">
-			            		<input class="app-form-control" placeholder="NAME">
-			            	</div>
-				            <div class="app-form-group">
-				              	<input class="app-form-control" placeholder="EMAIL">
-				            </div>
-				            <div class="app-form-group">
-				              	<input class="app-form-control" placeholder="CONTACT NO">
-				            </div>				            
-			            	<div class="app-form-group buttons">
-			              		<a class="app-form-button" href="#"> REGISTER</a>
-			              		<a class="app-form-button" href="services.html"> SEND</a>
-			            		</div>
-		          		</div>
-		        	</div>
-		      	</div>
-		    </div>
-		    <div class="t1">Click On Send</div>		
-		</div>
 
 		
 
-	</div>
+	</style>
 
-	        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+<body>
+
+	<div>
+		<div class="container">
+			<div class="screen-body">
+				<span>Please sign in.</span>
+				<form class="form">
+					<input class="l1" placeholder="NAME">
+					<input class="l1" placeholder="PASSWORD">
+					
+				</form>
+				<p>Your Cloud ID is the email address or mobile phone number you have been registered, please check your mail for more information.</p>
+				
+				<div class="form-buttons">
+              			<a href="services.html"><button class="submit" type="submit">Sign In</button></a>
+            	</div>
+            	<a class="text1" href="#">Forgotten your Cloud ID or password?</a>
+				<a class="text1" href="#">Don’t have a Cloud ID? Create one now.</a>
+				
+			</div>
+		</div>
+	</div>
+	
+	
+
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <script type="text/javascript">
-            
-            $(function() {
-                
-                var welcomeSection = $('.container-left'),
-                    enterButton = welcomeSection.find();
-                
-                setTimeout(function() {
-                    welcomeSection.removeClass('content-hidden');
-                }, 500);
-               
-                
-                
-            })();
+
             
             
             

@@ -11,22 +11,35 @@
                 padding: 0;
             }
             body {
+                background: 
+                radial-gradient(black 5%, transparent 16%) 0 0,
+                radial-gradient(black 5%, transparent 16%) 8px 8px,
+                radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+                radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+                background-color:#000;
+                background-size:16px 16px;
                 font-family: 'Open Sans', Arial, sans-serif;
-                font-weight: 700;
+                
             }
+
+
+
+
             .blueit{
-                color: #00C7FF;
+                color: #0057FF;
             }
             .whiteit{
-                color: #FFA600;
+                color: #5AD8D0;
             }
             .welcome-section {
+                
                 position: absolute;
+                text-align: center;
                 width: 100%;
-                height: 100%;
+                height: 70%;
                 top: 0;
                 left: 0;
-                background-color: #3e3e3e;
+                background-color: #fff;
                 overflow: hidden;
             }
             .welcome-section .content-wrap {
@@ -40,22 +53,110 @@
             }
             .welcome-section .content-wrap .fly-in-text li {
                 display: inline-block;
-                margin-right: 30px;
-                font-size: 5em;
+                padding-right: 2px;
+                font-size: 10em;
+                margin-right: 20px; 
                 opacity: 1;
+                margin-bottom: 10px;
                 transition: all 3.5s ease;
             }
+            .welcome-section .content-wrap span{
+                color: #515A5A;
+                font-size: 1.7em;
+
+            }
+
             .welcome-section .content-wrap .fly-in-text li:last-child {
                 margin-right: 0;
             }
-            .welcome-section .content-wrap .enter-button {
-                display: block;
-                text-align: center;
-                font-size: 1em;
-                text-decoration: none;
-                color: #FFA600;
+            .welcome-section2 .enter-button {
+                position: absolute;
+                top: 66%;
+                width: 100%;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
                 opacity: 1;
                 transition: all 1s ease 5s;
+            }
+
+
+
+
+
+            .button {
+                min-width: 60px;
+                min-height: 60px;
+                font-family: 'Nunito', sans-serif;
+                font-size: 22px;
+                text-transform: uppercase;
+                text-decoration: none;
+
+                font-weight: 700;
+                color: #fff;
+                background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+                border: none;
+                border-radius: 50em;
+                transition: all 0.3s ease-in-out 0s;
+                cursor: pointer;
+                outline: none;
+                position: relative;
+                padding: 10px;
+            }
+
+            button::before {
+                content: '';
+                border-radius: 1000px;
+                min-width: calc(60px + 12px);
+                min-height: calc(60px + 12px);
+                border: 6px solid #00FFCB;
+                box-shadow: 0 0 60px rgba(0,255,203,.64);
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 0;
+                transition: all .3s ease-in-out 0s;
+            }
+
+            .button:hover, .button:focus {
+                color: #313133;
+                transform: translateY(6px);
+            }
+
+            button:hover::before, button:focus::before {
+                opacity: 1;
+            }
+
+            button::after {
+              content: '';
+              width: 10px; height: 10px;
+              border-radius: 50em;
+              border: 6px solid #00FFCB;
+              position: absolute;
+              z-index: -1;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              animation: ring 1.5s infinite;
+            }
+
+            button:hover::after, button:focus::after {
+              animation: none;
+              display: none;
+            }
+
+            @keyframes ring {
+              0% {
+                width: 20px;
+                height: 20px;
+                opacity: 1;
+              }
+              100% {
+                width: 200px;
+                height: 200px;
+                opacity: 0;
+              }
             }
             
             .welcome-section.content-hidden .content-wrap .fly-in-text li { opacity: 0; }
@@ -64,12 +165,52 @@
             .welcome-section.content-hidden .content-wrap .fly-in-text li:nth-child(3) { transform: translate3d(0, 100px, 0); }
             .welcome-section.content-hidden .content-wrap .fly-in-text li:nth-child(4) { transform: translate3d(100px, 0, 0); }
             .welcome-section.content-hidden .content-wrap .fly-in-text li:nth-child(5) { transform: translate3d(100px, 0, 0); }
-            .welcome-section.content-hidden .content-wrap .enter-button { opacity: 0; transform: translate3d(0, -30px, 0); }
-            
-            @media (min-width: 800px) {
-                .welcome-section .content-wrap .fly-in-text li { font-size: 10em; }
-                .welcome-section .content-wrap .enter-button { font-size: 1.5em; }
+            .welcome-section2.content-hidden.enter-button { opacity: 0; transform: translate3d(0, -30px, 0); }
+
+
+            @media (max-width: 1300px) {
+                .welcome-section .content-wrap .fly-in-text li { 
+                    font-size: 7em;
+                    margin-right: 0; 
+                }
+                .welcome-section .content-wrap span{
+                    font-size: 1.2em;
+                }
             }
+            
+            @media (max-width: 800px) {
+                .welcome-section .content-wrap .fly-in-text li { 
+                    font-size: 4.5em;
+                    margin-right: 0; 
+                }
+                .welcome-section .content-wrap span{
+                    font-size: 1.2em;
+                }
+            }
+            @media screen and (max-width: 500px) {
+                .welcome-section .content-wrap .fly-in-text li { 
+                    font-size: 3.3em;
+                    margin-right: 0px;
+                    margin-bottom: 20px;
+                    padding: 0px; 
+                }
+                .welcome-section .content-wrap span{
+                    font-size: 1.2em;
+                }
+            }
+            @media screen and (max-width: 400px) {
+                .welcome-section .content-wrap .fly-in-text li { 
+                    font-size: 3em;
+                    margin-right: 0px;
+                    margin-bottom: 50px;
+                    padding: 0px; 
+                }
+                .welcome-section .content-wrap span{
+                    font-size: 1.3em;
+                }
+            }
+
+
             
             
             
@@ -87,11 +228,14 @@
                     <li class="whiteit">U</li>
                     <li class="whiteit">D</li>
                 </ul>
-                
-                <a href="login.html" class="enter-button">- Lets Go -</a>
+                <span>' An Intermediate Security Service Protection for Cloud Storage Service '</span>
             </div>
         </div>
-        
+        <div class="welcome-section2 content-hidden2">
+            <div class="enter-button">
+                <a href="login.html"><button class="button">Go</button></a>
+            </div>
+        </div>
         
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
@@ -99,20 +243,13 @@
             
             $(function() {
                 
-                var welcomeSection = $('.welcome-section'),
-                    enterButton = welcomeSection.find('.enter-button');
+                var welcomeSection = $('.welcome-section')
+                    
                 
                 setTimeout(function() {
                     welcomeSection.removeClass('content-hidden');
-                }, 500);
-                
-                enterButton.on('click', function() {
-                    welcomeSection.addClass('content-hidden').fadeOut();
-                });
-                
-                
-            })();
-            
+                }, 500); 
+            });
             
             
         </script>
