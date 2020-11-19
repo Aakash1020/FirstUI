@@ -11,35 +11,31 @@
                 padding: 0;
             }
             body {
-                background: 
+                /*background: 
                 radial-gradient(black 5%, transparent 16%) 0 0,
                 radial-gradient(black 5%, transparent 16%) 8px 8px,
                 radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
                 radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
-                background-color:#000;
-                background-size:16px 16px;
+                background-size:16px 16px;*/
+                background-color:#0057FF;
                 font-family: 'Open Sans', Arial, sans-serif;
                 
             }
-
-
-
 
             .blueit{
                 color: #0057FF;
             }
             .whiteit{
-                color: #5AD8D0;
+                color: #fff;
             }
             .welcome-section {
-                
                 position: absolute;
                 text-align: center;
                 width: 100%;
-                height: 70%;
+                height: 74%;
                 top: 0;
                 left: 0;
-                background-color: #fff;
+                background-color: #000;
                 overflow: hidden;
             }
             .welcome-section .content-wrap {
@@ -61,7 +57,8 @@
                 transition: all 3.5s ease;
             }
             .welcome-section .content-wrap span{
-                color: #515A5A;
+                color: #fff;
+                opacity: 50%;
                 font-size: 1.7em;
 
             }
@@ -71,7 +68,7 @@
             }
             .welcome-section2 .enter-button {
                 position: absolute;
-                top: 66%;
+                top: 70%;
                 width: 100%;
                 display: inline-flex;
                 align-items: center;
@@ -81,9 +78,6 @@
             }
 
 
-
-
-
             .button {
                 min-width: 60px;
                 min-height: 60px;
@@ -91,17 +85,17 @@
                 font-size: 22px;
                 text-transform: uppercase;
                 text-decoration: none;
-
                 font-weight: 700;
-                color: #fff;
-                background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+                color: #000;
+                background-color: #0057FF;
                 border: none;
+
                 border-radius: 50em;
                 transition: all 0.3s ease-in-out 0s;
                 cursor: pointer;
                 outline: none;
                 position: relative;
-                padding: 10px;
+                
             }
 
             button::before {
@@ -120,44 +114,20 @@
             }
 
             .button:hover, .button:focus {
-                color: #313133;
+                color: #fff;
                 transform: translateY(6px);
+                border: 2px solid #000;
             }
 
             button:hover::before, button:focus::before {
                 opacity: 1;
             }
-
-            button::after {
-              content: '';
-              width: 10px; height: 10px;
-              border-radius: 50em;
-              border: 6px solid #00FFCB;
-              position: absolute;
-              z-index: -1;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-              animation: ring 1.5s infinite;
-            }
-
             button:hover::after, button:focus::after {
               animation: none;
               display: none;
             }
 
-            @keyframes ring {
-              0% {
-                width: 20px;
-                height: 20px;
-                opacity: 1;
-              }
-              100% {
-                width: 200px;
-                height: 200px;
-                opacity: 0;
-              }
-            }
+            
             
             .welcome-section.content-hidden .content-wrap .fly-in-text li { opacity: 0; }
             .welcome-section.content-hidden .content-wrap .fly-in-text li:nth-child(1) { transform: translate3d(-200px, 0, 0); }
@@ -209,10 +179,6 @@
                     font-size: 1.3em;
                 }
             }
-
-
-            
-            
             
         </style>
     </head>
@@ -228,7 +194,7 @@
                     <li class="whiteit">U</li>
                     <li class="whiteit">D</li>
                 </ul>
-                <span>' An Intermediate Security Service Protection for Cloud Storage Service '</span>
+                <span>' We Provide you Information on Cloud Services '</span>
             </div>
         </div>
         <div class="welcome-section2 content-hidden2">

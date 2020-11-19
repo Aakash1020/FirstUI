@@ -10,11 +10,13 @@
 		body{
 			margin: 0;
 			padding: 0;
-			width: auto;
+			width: 100%;
 			height: 100%;
+			background-image: -webkit-linear-gradient(150deg, #0057FF 35%, #000 35%);
 			font-family: 'Open Sans', Arial, sans-serif;
 		}
 		.container{
+			background-color: transparent;
 			display: flex;
 			height: 100vh;
 		}
@@ -22,20 +24,14 @@
 			background-color: transparent;
 			margin: auto;
 			width: auto;
-			padding: 10px;
-			
-			
+			padding: 10px;			
 		}
 		.screen-body span{
 			font-size: 3em;
 			margin: 20px;
+			color: #fff;
+		}
 		
-		}
-		@media (max-width: 400px){
-			.screen-body span{
-				font-size: 2em;
-			}
-		}
 		.form{
 			background-color: white;
 			margin-top: 40px;
@@ -43,47 +39,34 @@
 			border-radius: 15px;
 			z-index: -1;
 		}
-
-
-		
 		.l1{
 			display: flex;
 			margin: 20px;
 			width: 40%;
 			padding: 20px;
-			background: none;
+			background: #fff;
 			border-radius: 20px;
-			border: 1px solid #666;
+			border: 1px solid #fff;
 			color: #000;
 			font-size: 14px;
 			outline: none;
-			
-		}
-		@media (max-width: 400px){
-			.l1{
-				width: 75%;
-				padding: 15px;
-				font-size: 12px;
-				justify-content: center;
-			}
 		}
 		.l1:placeholder {
 		  	color: #666;
 		}
-
-
 		.screen-body p{
 			width: 47%;
 			margin-left: 10px;
 			padding: 10px;
 			text-decoration: none;
 			font-size: 0.9em;
+			color: #fff;
+			opacity: 70%;
+
 		}
-		@media (max-width: 400px){
-			.screen-body p{
-				width: 85%;
-				font-size: 0.8em;
-			}
+		.link-overflow{
+			position: absolute;
+			background-color: transparent;
 		}
 		.text1{
 			color: #0057FF;
@@ -92,26 +75,19 @@
 			padding: 10px;
 			text-decoration: none;
 			font-size: 1.1em;
-			width: auto;
+			overflow: hidden;
 		}
-		@media (max-width: 400px){
-			.text1{
-				font-size: 0.9em;
-				padding: 5px;
-				margin-left: 15px;
-			}
-		}
-
 		.text1:hover{
 			text-decoration: underline;
 		}
-		
 		.submit{
 			background-color: #0057FF;
 			text-align: center;
   			border: none;
   			color: white;
-  			margin: 20px;
+  			margin-top: 10px;
+  			margin-left: 20px;
+  			margin-bottom: 10px;
   			padding: 20px;
   			border-radius: 20px;
   			font-size: 14px;
@@ -119,23 +95,74 @@
   			cursor: pointer;
   			outline: none;
 		}
-		@media (max-width: 400px){
+
+
+		@media (max-width: 460px){
+			.screen-body span{
+				font-size: 2em;
+			}
+			.container{
+				background-image: none;
+				background-color: #000;
+			}
+			.l1{
+				width: 75%;
+				padding: 15px;
+				font-size: 12px;
+				justify-content: center;
+			}
+			.screen-body p{
+				width: 85%;
+				font-size: 0.8em;
+			}
+			.text1{
+				font-size: 0.9em;
+				padding: 5px;
+				margin-left: 15px;
+			}
 			.submit{
 				width: 85%;
-				padding: 18px;
+				
 			}
+			.textt{
+				visibility: hidden;
+			}
+		}
+		@media (max-width: 700px){
+			.container{
+				background-image: none;
+				background-color: #000;
+			}
+
 		}
 
 
-		
+		.notice{
+			width: 100%;
+			background-color: red;
+		}
+		.notice .textt{
+			color: #fff;
+			float: right;
+			font-size: 20px;
+			text-align: center;
+			padding-top: 40px;
+		}
+		.notice .textt h1{
+			color: #fff;
+		}
 
 	</style>
 
 </head>
 <body>
+	
+	
 
 	<div>
+		
 		<div class="container">
+			
 			<div class="screen-body">
 				<span>Please sign in.</span>
 				<form class="form">
@@ -148,11 +175,19 @@
 				<div class="form-buttons">
               			<a href="services.html"><button class="submit" type="submit">Sign In</button></a>
             	</div>
-            	<a class="text1" href="#">Forgotten your Cloud ID or password?</a>
-				<a class="text1" href="#">Don’t have a Cloud ID? Create one now.</a>
+            	<div class="link-overflow">
+            		<a class="text1" href="#">Forgotten your Cloud ID or password?</a>
+					<a class="text1" href="#">Don't have a Cloud ID? Create one now.</a>
+            	</div>
+
+            	<div class="notice">
+					<div class="textt"><b>just click</b><h2>SIGN IN</h2><b>for now</b></div>
+				</div>
+            	
 				
 			</div>
 		</div>
+		
 	</div>
 	
 	
