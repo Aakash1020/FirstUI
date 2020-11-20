@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   padding: 0;
@@ -80,11 +83,44 @@ body {
   opacity: 60%;
   margin-top: 90px;
 }
+@media (max-width: 1000px){
+  .row{    
+    margin-top: 50px;
+    flex-direction: column;
+    background-color: black;
+  }
+  .col1 {
+    height: 400px;
+     
+  }
+  .Container{
+    background-image: none;
+    background-color: blue;
+    padding: 10px;
+  }
+  .span{
+    font-size: 5em;
+}
+.subtext{
+    background-color: transparent;
+    font-size: 1.2em;
+    width: auto;
+    color: #fff;
+    opacity: 60%;
+    margin-top: 90px;
+  }
+  .subtext p{
+    margin-right: 20px;
+  }
+}
+
+
+
+
 .row {
-  margin-top: 50px;
-  width:100%;
-  justify-content: center;
+  margin-top: 10px;
   display: flex;
+  flex-wrap: wrap;
   background-color: black;
   
 }
@@ -98,19 +134,19 @@ body {
   opacity: 60%;
 
 }
-.row2 {
-  margin-top: 1px;
-  width:100%;
-  justify-content: center;
-  display: flex;
-  background-color: black;
-}
 .col1 {
   height: 400px;
-  width: calc(100% / 3);
+  flex: 20%;
   font-family: 'Open Sans', sans-serif;
   background-color: #fff;
   margin: 1px;  
+}
+.col2{
+  height: 400px;
+  flex: 20%;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #fff;
+  margin: 1px;
 }
 .textbox{
   font-size: 2em;
@@ -122,6 +158,7 @@ hr{
   background-color: #CCD1D1;
   margin: 20px; 
 }
+
 
 /***********Buttons Learn more****************/
 
