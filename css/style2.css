@@ -3,7 +3,10 @@ nav {
     overflow: hidden;
     background: #000;
     width: 100%;
+    padding: 10px;
     text-align: center;
+    position: relative;
+    z-index: 1;
 }   
 
 .nav-content {
@@ -39,7 +42,7 @@ nav {
     display: none;
     grid-gap: 5px;
     grid-template-columns: auto;
-    padding: 17px 0;
+    padding: 10px 0;
     height: 10px;
     cursor: pointer;
     transition: all 0.3s;
@@ -149,19 +152,22 @@ body, button, input {
 .background {
   display: flex;
   min-height: 100vh;
+  z-index: -1;
 }
 
 .container {
   flex: 0 1 700px;
   margin: auto;
   padding: 10px;
-  z-index: -1;
+  background-color: transparent;
 }
 
 .screen {
   position: relative;
-  background-image: -webkit-linear-gradient(150deg, #000 51%, #0057FF 51%);
+  background-image: -webkit-linear-gradient(150deg, #000 53%, #0057FF 53%);
   border-radius: 15px;
+
+
 }
 
 .screen:after {
@@ -181,7 +187,7 @@ body, button, input {
   display: flex;
   align-items: center;
   padding: 10px 20px;
-  background-image: -webkit-linear-gradient(150deg, #000 36.6%, #0057FF 36%);
+  background-image: -webkit-linear-gradient(150deg, #000 39.4%, #0057FF 39.4%);
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }

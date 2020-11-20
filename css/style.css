@@ -18,6 +18,7 @@ nav {
     overflow: hidden;
     background: #000;
     width: 100%;
+    padding: 10px;
     text-align: center;
     position: fixed;
     top: 0;
@@ -33,7 +34,7 @@ nav {
     justify-content: space-between;
 }
 
-.nav-content a {
+.nav-links a{
     display: block;
     font-size: 14px;
     line-height: 44px;
@@ -58,11 +59,12 @@ nav {
     display: none;
     grid-gap: 5px;
     grid-template-columns: auto;
-    padding: 17px 0;
+    padding: 10px 0;
     height: 10px;
     cursor: pointer;
     transition: all 0.3s;
 }
+
 
 .bar {
     height: 1px;
@@ -151,11 +153,12 @@ nav {
   color: white;
   padding: 30px;
   top: 50px;
-  font-weight: 700;
+  
   position: fixed;
   
 }
 .span{
+  margin-top: 25px;
   font-size: 5em;
 }
 .subtext{
