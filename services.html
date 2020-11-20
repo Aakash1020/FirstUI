@@ -6,14 +6,23 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
  
-  <div class="nav">
-      <ul>
-        <li class="home"><a href="login.html">Home</a></li>
-        <li class="services"><a href="services.html">Services</a></li>
-        <!--<li class="Products"><a href="#">Products</a></li>-->
-        <li class="Contacts"><a href="Details.html">Contacts</a></li>
-      </ul>
-    </div>
+  <nav> 
+        <div class="nav-content">    
+            <div class="nav-icon">
+                <div class="bar one"></div>
+                <div class="bar two"></div>
+                <div class="bar two"></div>
+            </div>
+
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="login.html">Login</a>
+                <a href="#">Products</a>
+                <a href="services.html">Services</a>
+                <a href="Details.html">Contact</a>
+            </div>
+        </div>
+    </nav>
 
 </head>
 <body>
@@ -25,12 +34,9 @@
         
 
     </div>
-    <div class="marquee">
+    <!--<div class="marquee">
         <marquee><b>This Website is under construction</b></marquee>
-    </div>
-    
-    
-    
+    </div>-->
     
     <div class="row">
         
@@ -136,4 +142,12 @@
     </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript">
+     const navIcon = document.querySelector(".nav-icon");
+        const nav = document.querySelector("nav");
+
+        navIcon.onclick = function () {
+            nav.classList.toggle('show');
+        }
+</script>
 </html>
