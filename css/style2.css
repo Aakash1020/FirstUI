@@ -166,8 +166,6 @@ body, button, input {
   position: relative;
   background-image: -webkit-linear-gradient(150deg, #000 53%, #0057FF 53%);
   border-radius: 15px;
-
-
 }
 
 .screen:after {

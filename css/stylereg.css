@@ -1,0 +1,67 @@
+body{
+	margin: 0;
+	padding: 0;
+	background-image: -webkit-linear-gradient(150deg, #0057FF 35%, #fff 35%);
+	font-family: 'Montserrat', sans-serif;
+}
+.background{
+	background-color: transparent;
+	min-height: 100vh;
+}
+.container{
+	background-color: transparent;
+	position: absolute;
+	width: 50%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 10px;
+}
+.Signup_form{
+	background-color: transparent;
+	padding: 10px;
+	color: #000;
+}
+#H1{
+	font-size: 2.5em;
+}
+form{
+	background-color: transparent;
+	margin: 10px 0;
+	padding: 0;
+}
+.Username_group, .Password_group, .Confirm_Password_group{
+	padding: 5px 0;
+}
+input{
+	margin: 10px 0;
+	width: 40%;
+	padding: 15px 20px;
+	background: #fff;
+	border-radius: 20px;
+	border: 1px solid #000;
+	color: #000;
+	font-size: 14px;
+	outline: none;
+}
+.button_group{
+	margin: 20px 0;
+}
+.button_group button{
+	text-decoration: none;
+	padding: 10px 20px;
+	border-radius: 20px;
+	cursor: pointer;
+	outline: none;
+	border: none;
+	color: #fff;
+	margin: 10px;
+	background-color: #0057FF;
+}
+.button_group a{
+	text-decoration: none;
+	color: #fff;
+}
+.already_account{
+	font-size: 1.1em;
+}

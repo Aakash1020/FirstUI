@@ -43,17 +43,16 @@ nav {
     color: #ffffff;
 }
 
-.nav-content a:hover,
-.nav-icon:hover {
-    color: blue;
-}
-
 .nav-links {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
+.nav-links a:hover {
+  color: #0057FF;
+}
+
 
 .nav-icon {
     display: none;

@@ -1,0 +1,146 @@
+body{
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			height: 100%;
+			background-image: -webkit-linear-gradient(150deg, #0057FF 35%, #000 35%);
+			font-family: 'Open Sans', Arial, sans-serif;
+		}
+		.container{
+			background-color: transparent;
+			display: flex;
+			height: 100vh;
+		}
+		.screen-body{
+			background-color: transparent;
+			margin: auto;
+			width: auto;
+			padding: 10px;			
+		}
+		.screen-body span{
+			font-size: 3em;
+			margin: 20px;
+			color: #fff;
+		}
+		
+		.form{
+			margin-top: 20px;
+			background: transparent;
+			border-radius: 15px;
+			z-index: -1;
+		}
+		.l1{
+			margin: 20px;
+			width: 40%;
+			padding: 20px;
+			background: #fff;
+			border-radius: 20px;
+			border: 1px solid #fff;
+			color: #000;
+			font-size: 14px;
+			outline: none;
+		}
+		.l1:placeholder {
+		  	color: #666;
+		}
+		.ptext{
+			width: 50%;
+		}
+		.ptext p{
+			margin-left: 20px;
+			padding: 10px;
+			text-decoration: none;
+			font-size: 0.85em;
+			color: #fff;
+			opacity: 70%;
+
+		}
+		.link-overflow{
+			position: absolute;
+			background-color: transparent;
+		}
+		.text1{
+			color: #0057FF;
+			display: flex;
+			margin-left: 10px;
+			padding: 10px;
+			text-decoration: none;
+			font-size: 1.1em;
+			overflow: hidden;
+		}
+		.text1:hover{
+			text-decoration: underline;
+		}
+		.submit{
+			background-color: #0057FF;
+			text-align: center;
+  			border: none;
+  			color: white;
+  			margin-top: 10px;
+  			margin-left: 20px;
+  			margin-bottom: 10px;
+  			padding: 20px;
+  			border-radius: 20px;
+  			font-size: 14px;
+  			width: 45%;
+  			cursor: pointer;
+  			outline: none;
+		}
+
+
+		@media (max-width: 460px){
+			.screen-body span{
+				font-size: 2em;
+			}
+			.container{
+				background-image: none;
+				background-color: #000;
+			}
+			.l1{
+				width: 75%;
+				padding: 15px;
+				font-size: 12px;
+				justify-content: center;
+			}
+			.ptext{
+				width: 85%;
+				font-size: 0.8em;
+			}
+			.text1{
+				font-size: 0.9em;
+				padding: 5px;
+				margin-left: 15px;
+			}
+			.submit{
+				width: 85%;
+				
+			}
+			.textt{
+				visibility: hidden;
+			}
+		}
+		@media (max-width: 700px){
+			.container{
+				background-image: none;
+				background-color: #000;
+			}
+
+		}
+
+
+		.notice{
+			width: 100%;
+			background-color: red;
+		}
+		.notice .textt{
+			color: #fff;
+			float: right;
+			font-size: 20px;
+			text-align: center;
+			padding-top: 40px;
+		}
+		.notice .textt h1{
+			color: #fff;
+		}
+
+	</style>
