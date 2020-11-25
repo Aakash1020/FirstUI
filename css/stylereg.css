@@ -1,21 +1,23 @@
 body{
 	margin: 0;
 	padding: 0;
-	background-image: -webkit-linear-gradient(150deg, #0057FF 35%, #fff 35%);
+	background-image: -webkit-linear-gradient(150deg, #0057FF 50%, #fff 50%);
 	font-family: 'Montserrat', sans-serif;
 }
 .background{
 	background-color: transparent;
-	min-height: 100vh;
+	min-height: 100vh;text-align: center;
 }
 .container{
-	background-color: transparent;
+	background-color: #f2f2f2;
+	border-radius: 10px;
 	position: absolute;
-	width: 50%;
+	width: 30%;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	padding: 10px;
+	box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
 }
 .Signup_form{
 	background-color: transparent;
@@ -35,11 +37,12 @@ form{
 }
 input{
 	margin: 10px 0;
-	width: 40%;
+	width: 65%;
 	padding: 15px 20px;
 	background: #fff;
 	border-radius: 20px;
 	border: 1px solid #000;
+
 	color: #000;
 	font-size: 14px;
 	outline: none;
@@ -56,12 +59,75 @@ input{
 	border: none;
 	color: #fff;
 	margin: 10px;
-	background-color: #0057FF;
+	width: 100px;
+	background-color: #000;
 }
 .button_group a{
 	text-decoration: none;
 	color: #fff;
+	font-weight: 700;
 }
 .already_account{
 	font-size: 1.1em;
+}
+
+@media (max-width: 1000px){
+	.background{
+		background-image: -webkit-linear-gradient(150deg, #0057FF 50%, #fff 50%);
+		background-color: #fff;
+	}
+	.container{
+		min-width: 50%;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+}
+
+@media (max-width: 780px){
+			.background{
+				background-image: -webkit-linear-gradient(150deg, #0057FF 50%, #fff 50%);
+				background-color: #fff;
+			}
+			.container{
+				min-width: 50%;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+			.form input{
+				width: 80%;
+				font-weight: 700;
+				border: 1px solid #000;
+			}
+			.Signup_form{
+				background-color: transparent;
+				border-radius: 10px;
+				color: #000;
+				font-weight: 700;
+			}
+}
+@media (max-width: 460px){
+	.container{
+		min-width: 90%;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	.Signup_form{
+		background-color: transparent;
+		border-radius: 10px;
+		color: #000;
+		font-weight: 700;
+	}
+	.form input{
+		width: 80%;
+		font-weight: 700;
+		border: 1px solid #000;
+	}
+	.already_account a{
+		color: red;
+		text-decoration: none;
+	}
 }
